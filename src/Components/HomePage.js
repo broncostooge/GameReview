@@ -17,8 +17,6 @@ class HomePage extends Component {
             steamId = request.response.steamid
             store.dispatch({type:'SET_STEAM_ID', steamId: steamId})
         }
-        console.log(store.getState());
-
     }
 
     render() {
@@ -32,6 +30,3 @@ class HomePage extends Component {
 }
 
 export default HomePage;
-
-//http://api.steampowered.com/ISteamUser/ResolveVanityURL/v0001/?key=3F1EEFCCC0C8F311EFD50A76A5C26E68&vanityurl=broncostooge
-//http://api.steampowered.com/ISteamUser/ResolveVanityURL/v0001/?key=3F1EEFCCC0C8F311EFD50A76A5C26E68&vanityurl=
