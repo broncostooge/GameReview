@@ -26,8 +26,8 @@ class HomePage extends Component {
         }
     }
 
-    async FetchSteamUserGameList() {
-        console.log(store.getState());
+    async FetchSteamUserGameList() {\
+        
         if(this.state.steamUser64ID) {
             await fetch('http://localhost:61581/SteamUserGameList/' + this.state.steamUser64ID)
             .then(res => res.json())
