@@ -1,6 +1,9 @@
 const initialState = {
     steamId: null,
-    gameLibrary: null
+    gamesOwned: {
+        gameCount: 0,
+        gameList: []
+    }
 }
 
 export default (state = initialState, action) => {
@@ -8,10 +11,15 @@ export default (state = initialState, action) => {
 
     //SET STEAMID
     if(action.type === 'SET_STEAM_ID'){
-        newState.steamId = action.steamId;
+        newState.steamId = action.steamID;
     }
-    if(action.type === 'SET_GAME_LIBRARY'){
-        newState.gameLibrary = action.gameData;
+
+    if(action.type === 'SET_GAMES_OWNED_GAMECOUNT'){
+        newState.gamesOwned.gameCount = action.gameCount;
+    }
+
+    if(action.type === 'SET_GAMES_OWNED_GAMESOWNED'){
+        newState.gamesOwned.gameList = action.gamesOwned;
     }
 
     return newState;
